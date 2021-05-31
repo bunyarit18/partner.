@@ -1,0 +1,219 @@
+
+<app-progress #progress (stateChange)="onStateChange($event)">
+  <app-progress-step>
+
+    <div class="step-progress" >
+      <form class="example-form" [formGroup]="testForm">
+        <h1>ขั้นตอนที่ 1</h1><br>
+        <h1>ข้อตกลงในการใช้งาน</h1><br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, velit
+          eius expedita quis tempore suscipit minima repudiandae. Magnam tempore,
+          nostrum facilis quas, cumque dicta eveniet vero, nisi cum ipsa eos.
+        </p>
+      </form>
+
+    <div class="btn-block">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button type="submit" progressStepNext mat-raised-button color="primary"> ถัดไป </button>
+    </div>
+  </div>
+  </app-progress-step>
+
+
+  <app-progress-step>
+
+    <div class="testbox">
+    <form class="example-form" [formGroup]="testForm">
+      <h1>ขั้นตอนที่ 2</h1><br><br>
+      <h1> การตั้งค่าเริ่มต้นสำหรับการจัดการ </h1><br><br>
+
+        <div class="contact-item">
+          <div class="item">
+            <p>ชื่อโรงแรม<span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" ชื่อโรงแรมภาษาไทย " required/>
+          </div>
+          <div class="item">
+            <p>ชื่อโรงแรม</p>
+            <input type="text" name="name"  placeholder=" ชื่อโรงแรมภาษาอังกฤษ (ถ้ามี) ">
+          </div>
+          <div class="item">
+            <p>รหัสโรงแรม<span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" รหัส / ใบอนุญาติการตั้งโรงแรมของท่าน " required/>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="item">
+            <p>คำนำหน้าชื่อ</p>
+            <select>
+              <option value="ms">นาย</option>
+              <option value="miss">นาง</option>
+              <option value="mrs">นางสาว</option>
+            </select >
+          </div>
+          <div class="item">
+            <p>ชื่อ-สกุล เข้าของธุรกิจ<span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" ชื่อ-สกุล " required/>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="item">
+            <p>เลขประจำตัวประชาชน<span class="required">*</span></p>
+            <input type="text" id placeholder=" ระบุเลขประจำตัวประชาชน 13 หลัก" required/>
+          </div>
+          <div class="item">
+            <p>รูปบัตรประจำตัวประชาชน<span class="required">*</span></p>
+            <input type="file" name="file" accept="file/*" required/>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit" progressStepPrev mat-raised-button color="accent"> ย้อนกลับ </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="submit" progressStepNext mat-raised-button color="primary"> ถัดไป </button>
+        </div>
+    </form>
+  </div>
+  </app-progress-step>
+
+
+  <app-progress-step>
+    <div class="testbox">
+    <form class="example-form" [formGroup]="testForm">
+      <h1>ขั้นตอนที่ 3</h1><br>
+      <h1> ที่ตั้ง / ที่อยู่โรงแรม </h1><br><br>
+        <div class="item">
+          <p> ที่อยู่ 1 <span class="required">*</span></p>
+          <input type="text" name="name" placeholder=" บ้านเลขที่, หมู่บ้าน, ถนน, ซอย " required/>
+          <p> ที่อยู่ 2 </p>
+          <input type="text" name="name" placeholder=" บ้านเลขที่, หมู่บ้าน, ถนน, ซอย " >
+        </div>
+
+        <div class="contact-item">
+          <div class="item">
+            <p> อำเภอ <span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" อำเภอ " required/>
+          </div>
+          <div class="item">
+            <p> จังหวัด <span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" จังหวัด " required/>
+          </div>
+          <div class="item">
+            <p> รหัสไปรษณีย์ <span class="required">*</span></p>
+            <input type="text" name="name"  placeholder=" รหัสไปรษณีย์ " required/>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit" progressStepPrev mat-raised-button color="accent"> ย้อนกลับ </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="submit" progressStepNext mat-raised-button color="primary"> ถัดไป </button>
+        </div>
+    </form>
+  </div>
+  </app-progress-step>
+
+  <app-progress-step>
+    <div class="testbox">
+    <form class="example-form" [formGroup]="testForm">
+      <h1>ขั้นตอนที่ 4</h1><br>
+      <h1> การจัดการส่วนห้องพัก </h1><br>
+      <h3> ห้องพักประเภทที่ 1 </h3>
+      <div class="contact-item">
+        <div class="item">
+          <p>ประเภทห้องพัก ประเภทที่ 1<span class="required">*</span></p>
+          <input type="text" name="name"  placeholder=" ชื่อประเภทของห้องพัก " required/>
+        </div>
+        <div class="item">
+          <p>รูปประเภทห้องพัก<span class="required">*</span></p>
+          <input type="file" name="file" accept="file/*" required/>
+        </div>
+      </div>
+      <p>รายละเอียดห้องพัก</p>
+        <textarea rows="5" placeholder=" รายละเอียดเพิ่มเติม "></textarea>
+
+        <br><br><h3> ห้องพักประเภทที่ 2 (ถ้ามี) </h3>
+        <div class="contact-item">
+          <div class="item">
+            <p> ประเภทห้องพัก ประเภทที่ 2 </p>
+            <input type="text" name="name"  placeholder=" ชื่อประเภทของห้องพัก " >
+          </div>
+          <div class="item">
+            <p>รูปประเภทห้องพัก</p>
+            <input type="file" name="file" accept="file/*">
+          </div>
+        </div>
+        <p>รายละเอียดห้องพัก</p>
+        <textarea rows="5" placeholder=" รายละเอียดเพิ่มเติม "></textarea>
+
+        <br><br><h3> ห้องพักประเภทที่ 3 (ถ้ามี) </h3>
+        <div class="contact-item">
+          <div class="item">
+            <p> ประเภทห้องพัก ประเภทที่ 3 </p>
+            <input type="text" name="name"  placeholder=" ชื่อประเภทของห้องพัก " >
+          </div>
+          <div class="item">
+            <p>รูปประเภทห้องพัก</p>
+            <input type="file" name="file" accept="file/*">
+          </div>
+        </div>
+        <p>รายละเอียดห้องพัก</p>
+        <textarea rows="5" placeholder=" รายละเอียดเพิ่มเติม "></textarea>
+
+        <br><br><h3> ห้องพักประเภทที่ 4 (ถ้ามี) </h3>
+        <div class="contact-item">
+          <div class="item">
+            <p> ประเภทห้องพัก ประเภทที่ 4 </p>
+            <input type="text" name="name"  placeholder=" ชื่อประเภทของห้องพัก " >
+          </div>
+          <div class="item">
+            <p>รูปประเภทห้องพัก</p>
+            <input type="file" name="file" accept="file/*">
+          </div>
+        </div>
+        <p>รายละเอียดห้องพัก</p>
+        <textarea rows="5" placeholder=" รายละเอียดเพิ่มเติม "></textarea>
+
+        <div class="btn-block">
+          <button type="submit" progressStepPrev mat-raised-button color="accent"> ย้อนกลับ </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="submit" progressStepNext mat-raised-button color="primary"> ถัดไป </button>
+        </div>
+    </form>
+  </div>
+
+  </app-progress-step>
+
+
+</app-progress>
+
